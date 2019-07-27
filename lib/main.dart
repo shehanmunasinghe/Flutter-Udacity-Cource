@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 
-Widget helloRectangle() {
-  return Container(
-    color: Colors.greenAccent,
-  );
+class HelloRectangle extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Center(child: 
+        Container(
+          color: Colors.greenAccent,
+          height: 400,
+          width: 300,
+          child: Center(child:Text('Hello!',style: TextStyle(fontSize: 40),),)
+        ),
+    );
+
+  }
 }
 
 void main() {
@@ -13,6 +22,6 @@ void main() {
         appBar: AppBar(
           title: Text('data'),
         ),
-        body: helloRectangle(),
+        body: HelloRectangle(),
       )));
 }
